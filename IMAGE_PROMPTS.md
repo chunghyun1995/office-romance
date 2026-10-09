@@ -1,76 +1,25 @@
-# 일러스트 교체 가이드 (ComfyUI + JuggernautXL)
+# 실사풍 이미지와 교체 가이드
 
-게임은 이미지 파일이 없으면 자동으로 임시 실루엣/그라데이션을 보여줍니다.
-아래 파일명으로 이미지를 넣고 커밋하면, 코드 수정 없이 바로 교체됩니다.
-확장자는 `.webp` → `.jpg` → `.png` 순서로 찾습니다.
+내장 `image_gen`으로 생성한 이미지 43종을 사용합니다. 캐릭터 표정 18종, 배경 21종, 연인 데이트 장면 4종입니다.
 
-## 권장 설정
+| 캐릭터 | 나이 | 외모 | 기본 의상 |
+|---|---|---|---|
+| 한서윤 `seoyun` | 31 | 날카로운 여우상, 긴 검은 머리, 은색 안경 | 아이보리 블라우스, 차콜 슬랙스 |
+| 윤하린 `harin` | 21 | 순하고 둥근 강아지상, 갈색 단발, 슬림하고 작은 가슴의 성인 체형 | 불투명 흰 티셔츠, 데님 핫팬츠 |
+| 정유나 `yuna` | 25 | 도도하고 차분한 고양이상, 낮은 포니테일 | 세이지 오프숄더 니트, 불투명 흰 핫팬츠 |
 
-| 항목 | 캐릭터 스탠딩 | 배경 |
-|---|---|---|
-| 해상도 | 832 × 1216 (세로) | 1344 × 768 (가로) |
-| Steps / CFG | 30 / 4.5 | 30 / 4.5 |
-| Sampler | dpmpp_2m_sde, karras | dpmpp_2m_sde, karras |
-| 후처리 | 배경 제거(rembg 노드) → 투명 PNG 권장 | 그대로 |
+표정: `normal`, `smile`, `shy`, `sad`, `surprise`, `angry`.
+캐릭터는 `images/char/<id>_<표정>.webp`의 투명 WebP입니다. 기본 이미지를 참조해 표정만 수정하여 얼굴·복장·체형을 유지했습니다.
+배경과 데이트 장면은 `images/bg/<id>.webp`의 가로 이미지입니다.
 
-캐릭터는 **배경을 투명하게 뺀 PNG**가 가장 자연스럽습니다. 표정마다 seed를 고정하고 표정 문구만 바꾸면 얼굴이 일관되게 나옵니다.
+추가 장면: `apartment_night`, `motel_night`, `motel_morning`, `cg_seoyun_date`, `cg_harin_date`, `cg_yuna_date`.
+데이트 장면은 손잡기와 기대어 쉬는 일상적인 연인의 모습입니다. 밤의 친밀한 장면은 대화·포옹·키스 후 암전으로 이어집니다.
 
-**공통 네거티브**
-```
-cartoon, anime, illustration, 3d render, deformed, extra fingers, bad hands, blurry, watermark, text, logo, childlike, young-looking, teen, school uniform, nsfw, cleavage
-```
+최종 프롬프트와 파일명 전체는 `ASSET_PROMPTS.json`에 기록했습니다. 기본 캐릭터의 identity 필드는 얼굴 제작에 사용한 지시문입니다.
+해상도는 캐릭터 2048×3072px, 배경·데이트 장면 긴 변 2560px입니다. 생성 원본을 Lanczos 방식으로 업스케일했습니다. 원본·출력 픽셀 크기와 처리 방식은 각 항목의 resolution 필드에 기록되어 있습니다.
+교체하려면 같은 파일명으로 새 이미지를 넣으면 됩니다. 엔진은 `.webp` → `.jpg` → `.png` 순으로 탐색합니다.
 
-## 캐릭터 (모두 성인)
 
-파일 위치: `images/char/<id>_<표정>.png`
-표정: `normal`, `smile`, `shy`, `sad`, `surprise`, `angry` — 최소한 `normal`만 있어도 나머지 표정은 `normal`로 대체됩니다.
+## 하린의 헬스장 데이트
 
-### 한서윤 `seoyun` (29세, 라이브 기획 파트장)
-```
-photo of a 29-year-old Korean woman, mature professional, long straight black hair past shoulders, thin silver-rimmed glasses, white silk blouse and charcoal blazer, standing, upper body to thigh, plain light gray studio background, soft office lighting, 85mm, realistic skin texture, {EXPR}
-```
-
-### 윤하린 `harin` (26세, UI 디자이너)
-```
-photo of a 26-year-old Korean woman, adult office worker, chin-length brown bob haircut, small hoop earrings, oversized cream knit cardigan over a striped shirt, lanyard ID badge, standing, upper body to thigh, plain light gray studio background, natural daylight, 85mm, realistic skin texture, {EXPR}
-```
-
-### 정유나 `yuna` (27세, 마케팅팀)
-```
-photo of a 27-year-old Korean woman, adult office worker, very long dark hair tied in a low ponytail, sage green blouse, beige long skirt, holding a tablet, standing, upper body to thigh, plain light gray studio background, soft warm lighting, 85mm, realistic skin texture, {EXPR}
-```
-
-### 표정 문구 `{EXPR}`
-| 파일 접미사 | 넣을 문구 |
-|---|---|
-| `normal` | calm neutral expression, looking at viewer |
-| `smile` | warm gentle smile, looking at viewer |
-| `shy` | shy smile, slight blush, eyes looking slightly away |
-| `sad` | sad tired expression, eyes lowered |
-| `surprise` | surprised expression, eyes wide, lips slightly parted |
-| `angry` | serious stern expression, slight frown |
-
-## 배경
-
-파일 위치: `images/bg/<id>.jpg` — 프롬프트 앞에 `photo of`, 뒤에 `no people, wide angle, realistic, 35mm` 를 붙이세요.
-
-| id | 장면 | 프롬프트 핵심 |
-|---|---|---|
-| lobby | 회사 로비 | modern glass office building lobby in Pangyo Korea, morning |
-| office | 사무실 | open-plan game company office, rows of dual monitors, daytime |
-| office_night | 야근 사무실 | open-plan office at night, most lights off, monitor glow |
-| meeting | 회의실 | small glass meeting room, whiteboard, long table |
-| cafeteria | 사내 식당 | bright company cafeteria, food counters, lunchtime |
-| rooftop | 옥상 정원(밤) | office rooftop garden at night, benches, city skyline lights |
-| rooftop_sunset | 옥상 정원(노을) | office rooftop garden at sunset, orange purple sky |
-| cafe | 1층 카페 | cozy ground-floor coffee shop, window seats, afternoon |
-| cafe_night | 와인 바 | quiet dim wine bar, warm lamps, evening |
-| pantry | 탕비실 | office pantry, coffee machine, tea shelf, night |
-| street_night | 퇴근길 | Korean city street at night, crosswalk, office buildings |
-| street_day | 회사 앞 거리 | Korean business district street, daytime, gukbap restaurant signs |
-| izakaya | 이자카야 | Japanese izakaya interior, group table, lanterns |
-| karaoke | 노래방 | Korean karaoke room, neon lights, screen, sofa |
-| home | 내 방 | small tidy one-room apartment, morning sunlight |
-| gallery | 전시관 | white-walled art gallery in Seongsu, framed illustrations |
-| bookcafe | 북카페 | small book cafe in an alley, wooden shelves, warm light |
-| hangang | 한강 공원 | Han River park at sunset, picnic mats, bridge |
+연애 후일담에서 헬스장을 선택하면 산호색 스포츠 브라탑과 검정 돌핀 팬츠 차림의 하린 CG가 표시됩니다. 함께 몸 풀기 또는 각자 운동하기를 선택하고, 운동 후 점심 약속을 거쳐 기존 엔딩으로 이어집니다. 내장 image_gen으로 생성한 CG는 긴 변 2560px로 Lanczos 업스케일했습니다. 생성 프롬프트와 해상도는 ASSET_PROMPTS.json에 기록했습니다.

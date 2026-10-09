@@ -1,6 +1,6 @@
 // 스토리 스크립트 (DSL)
 // #라벨 | @bg 배경 | @show id 표정 [left|center|right] | @hide id | @hideall
-// @day 제목 | @set id+N | @jump 라벨 | @route | @end 엔딩ID 엔딩제목
+// @day 제목 | @fade out/in | @set id+N | @jump 라벨 | @route | @end 엔딩ID 엔딩제목
 // ? 선택지 -> 라벨 | id+N id-N   (연속된 ? 줄이 하나의 선택지 묶음)
 // 화자: 대사   /  그 외 줄은 나레이션.  {name} = 플레이어 이름
 window.STORY = String.raw`
@@ -14,7 +14,7 @@ window.STORY = String.raw`
 @show harin smile center
 돌아보니 커다란 토트백을 멘 여자가 숨을 고르며 서 있었다. 단발머리 끝이 바람에 살짝 뻗쳐 있다.
 하린: 아, 다행이다! 인사팀에서 신규 입사자 두 명이라고 했는데, 딱 보니까 그쪽인 것 같아서요.
-하린: 윤하린이에요. UI 디자이너로 들어왔어요. 전 회사에서 3년 하다가 왔으니까… 경력 입사 동기?
+하린: 윤하린이에요. UI 디자이너로 들어왔어요. 전 회사에서 1년 하다가 왔으니까… 경력 입사 동기?
 나: {name}입니다. 기획팀이에요. 잘 부탁드려요.
 하린: 기획! 그럼 앞으로 저 엄청 괴롭히시겠네요? 시안 수정 요청으로.
 하린: 농담이에요, 농담. 아마도요.
@@ -716,7 +716,7 @@ window.STORY = String.raw`
 노을이 강물 위에서 반짝였다. 그녀의 손은 작고, 따뜻했다.
 그리고 월요일 아침. 내 책상 위에는 엽서 옆에 새로운 메모가 붙어 있었다.
 '오늘 점심 국밥. 회장 명령. ♡'
-@end harin 윤하린 엔딩 「우리의 첫 번째 시안」
+@jump harin_after
 
 #route_yuna
 @bg rooftop_sunset
@@ -744,13 +744,13 @@ window.STORY = String.raw`
 유나: 그러니까 지금 이게, 처음으로 하는 부탁이에요.
 판교의 불빛이 하나둘 켜지기 시작했다. 우리는 오래도록 그 자리에 서 있었다.
 월요일 점심, 옥상 벤치에는 도시락이 두 개 놓여 있었다. 문어 소시지는 열여섯 개였다.
-@end yuna 정유나 엔딩 「크레딧 뒤의 한 줄」
+@jump yuna_after
 
 #route_seoyun
 @bg cafe_night
 @show seoyun normal center
 일요일 저녁. 서윤 파트장이 알려준 곳은 회사와 정반대 방향의 조용한 와인 바였다.
-안경 대신 렌즈를 낀 그녀는, 회사에서와는 전혀 다른 사람처럼 보였다.
+은은한 조명 아래의 그녀는 회사에서보다 한결 편안한 표정이었다.
 서윤: 놀란 표정 하지 마요. 나도 주말엔 사람이에요.
 서윤: …사실 많이 고민했어요. 오늘 부를까 말까.
 그녀는 와인잔을 천천히 돌렸다.
@@ -772,19 +772,366 @@ window.STORY = String.raw`
 그리고 월요일 아침. 내 기획서에는 평소처럼 빨간 펜 수정이 세 군데 있었다.
 그리고 맨 아래, 아주 작은 글씨로 한 줄.
 '잘했어요. 오늘 저녁 유자차. — 서윤'
+@jump seoyun_after
+
+#harin_after
+@hideall
+@bg cafe
+@day 연애 2주차 · 토요일
+@show harin smile center
+하린: 오늘은 동기회 회의 아니에요. 정식 데이트예요. 회의록 쓰면 안 돼요.
+커피 옆에는 둘이 찍은 사진이 놓여 있었다. 하린은 사원증 대신 작은 카메라를 들고 있었다.
+나: 아직도 동기님이라고 부를 거예요?
+@show harin shy center
+하린: 회사에선요. 밖에선… {name}. 아, 직접 부르니까 생각보다 떨리네.
+하린: 연애하면 매일 엄청 특별할 줄 알았어요. 근데 같이 장 보는 게 제일 좋더라.
+? 우리 집에서 같이 저녁을 만들자 -> harin_home
+? 주말 여행을 가서 예약한 모텔에 묵자 -> harin_motel
+? 주말에 함께 헬스장에서 운동한다 -> harin_gym
+
+#harin_home
+@bg apartment_night
+@show harin surprise center
+하린: 파스타 소스가 왜 이렇게 많아요? 레시피에 네 명분이라고 써 있네?
+나: 내일 것도 만들어둔 걸로 하죠.
+@show harin smile center
+그녀는 가장 잘 나온 접시를 사진으로 찍고 제목을 '첫 협업'이라고 붙였다.
+설거지를 끝낸 뒤 소파에 나란히 앉아 그녀가 만들던 작은 게임의 시안을 보았다.
+하린: 이번에도 출시 못 하면 어쩌지, 하는 생각이 가끔 들어요.
+나: 무서운 날에도 같이 만들어요. 내가 재촉하지는 않을게요.
+@bg cg_harin_date
+@hideall
+그녀가 내 손을 잡았다. 웃음소리가 잦아든 방에 서로의 손이 닿아 있는 감각만 또렷했다.
+하린: 지금, 안아줘도 돼요?
+나: 응. 나도 그러고 싶었어요.
+포옹이 풀린 뒤 우리는 눈을 마주쳤다. 그녀가 먼저 가까이 와 짧게 입을 맞췄다.
+@bg apartment_night
+@show harin shy center
+하린: 오늘 조금 더 같이 있고 싶어요. 그래도 괜찮아요?
+? 서로 편한 속도로, 오늘 밤 함께 머문다 -> harin_home_stay
+? 오늘은 여기까지, 집 앞까지 배웅한다 -> harin_leave
+
+#harin_home_stay
+나: 응. 마음이 바뀌면 언제든 말해요. 우리 둘 다.
+하린: 알겠어요. 그럼 지금은 손 안 놓을래요.
+@fade out
+@hideall
+긴 하루가 조용히 끝났다. 오늘 밤의 나머지 이야기는 둘만의 기억으로 남겨두었다.
+@bg home
+@day 다음 날 · 함께 고르는 아침
+@fade in
+@show harin smile center
+하린: 어제 남은 파스타, 정말 아침까지 먹는 거예요?
+나: 첫 협업의 유지보수 기간입니다.
+하린: 다음 버전은 토스트로 하죠. 제가 총괄할게요.
+@jump harin_epilogue
+
+#harin_motel
+@bg street_night
+@show harin normal center
+한 달 뒤, 주말 전시 여행을 함께 계획했다. 숙소와 돌아오는 시간도 둘이 미리 골랐다.
+@bg motel_night
+@show harin smile center
+하린: 회사에서 두 정거장 멀어졌을 뿐인데 여행 온 기분이네요.
+소파에서 사진을 넘겨보며 오늘 가장 좋았던 순간을 하나씩 골랐다.
+하린: 제일 좋은 사진은 이거. 둘 다 카메라 안 보고 웃는 거.
+@show harin shy center
+그녀가 내 어깨에 기댔다. 안아도 되냐고 묻자 고개를 끄덕이며 더 가까이 앉았다.
+하린: 오늘 같이 머물러도 괜찮아요? 그래도 서두르고 싶지는 않아요.
+? 서로의 마음을 확인하고 함께 머문다 -> harin_motel_stay
+? 오늘은 돌아가고, 다음 데이트를 약속한다 -> harin_leave
+
+#harin_motel_stay
+나: 우리 속도로 가요. 어느 순간이든 편하게 말해줘요.
+하린: 응. 그러니까 지금은 조금 더 가까이 앉아요.
+짧은 입맞춤 뒤 우리는 손을 잡고 한참 이야기를 했다.
+@fade out
+@hideall
+그날 밤은 서로가 아끼는 기억으로 남았다.
+@bg motel_morning
+@day 다음 날 · 늦은 체크아웃
+@fade in
+@show harin smile center
+하린: 어제 찍은 사진으로 앨범 만들었어요. 표지는 아직 미완성이에요.
+나: 제목은요?
+하린: '첫 일주일 다음'. 다음 페이지는 계속 비워둘 거예요.
+@jump harin_epilogue
+
+#harin_leave
+@bg street_night
+@show harin smile center
+하린: 좋아요. 오늘 아쉽다고 다음에 급하게 따라잡기 없기.
+나: 대신 내일 점심에 만나기.
+하린: 그건 회장 권한으로 승인합니다.
+집 앞에서 짧게 입을 맞추고 각자의 집에서 같은 사진을 배경화면으로 골랐다.
+@jump harin_epilogue
+
+#harin_gym
+@hideall
+@bg cg_harin_gym
+@day 연애 한 달 · 함께 움직이는 주말
+하린: 오늘은 운동 앱 출석 도장, 혼자 말고 둘이 찍는 날이에요.
+산호색 스포츠 브라탑과 돌핀 팬츠를 입은 하린이 매트 옆에서 수건을 흔들었다.
+나: 도장 다 모으면 보상도 있어요?
+하린: 끝나고 맛있는 점심! 무리해서 추가 점수 받기는 없어요.
+? 매트에서 가볍게 몸을 풀며 이야기한다 -> harin_gym_walk
+? 각자 좋아하는 운동을 하고 다시 만난다 -> harin_gym_rest
+
+#harin_gym_walk
+둘이 어설프게 동작을 따라 하다가 동시에 웃음이 터졌다.
+하린: 잘하는 모습만 보여주려면 데이트가 너무 피곤하겠죠? 오늘은 이 정도면 합격.
+@jump harin_gym_finish
+
+#harin_gym_rest
+하린은 자기 속도로 운동하고 돌아와 휴대폰에 출석 표시를 남겼다.
+하린: 기록보다 계속 오는 게 목표예요. 다음 주에도 같이 와줄래요?
+@jump harin_gym_finish
+
+#harin_gym_finish
+운동을 마치고 서로의 물병을 챙겼다. 다음 약속은 거창한 여행 대신 다음 주말의 같은 시간이었다.
+@hideall
+@bg street_day
+@show harin smile center
+샤워하고 평소 옷으로 갈아입은 뒤 헬스장 앞에서 다시 만났다.
+나: 이제 점심 먹으러 갈까요?
+우리는 손을 잡고 걸었다. 특별한 날 사이에 이런 평범한 시간이 하나씩 늘어갔다.
+@jump harin_epilogue
+
+#harin_epilogue
+@hideall
+@bg office
+@day 세 달 뒤 · 우리의 다음 시안
+@show harin normal center
+출시 전날, 하린은 처음으로 만든 화면 앞에서 한참 말이 없었다.
+하린: 진짜 세상에 나오는 거네. 안 없어지고.
+@show harin smile center
+하린: 고마워요. 잘할 거라고만 안 하고, 못하는 날에도 옆에 있어줘서.
+내 책상에는 첫 전시의 엽서와 주말 사진이 나란히 붙어 있었다.
+퇴근 뒤엔 회사 밖에서 손을 잡았다. 우리는 첫 시안을 지나 매일 조금씩 다음 장을 만들고 있었다.
+@end harin 윤하린 엔딩 「우리의 첫 번째 시안」
+
+#yuna_after
+@hideall
+@bg bookcafe
+@day 연애 2주차 · 일요일
+@show yuna normal center
+연인이 된 뒤에도 유나는 북카페에서 말을 많이 하지는 않았다. 대신 내 잔이 비면 먼저 채워주었다.
+유나: 요즘은 도와달라고 말하는 연습을 하고 있어요. 회사에서도, 여기서도.
+나: 오늘 연습할 부탁은 뭔데요?
+@show yuna shy center
+유나: 오늘 저녁을 같이 먹어달라는 거요. 그냥 빨리 헤어지기 싫어서.
+? 자취방에서 도시락 반찬을 함께 만든다 -> yuna_home
+? 근교 나들이 뒤 예약한 모텔에서 쉬어간다 -> yuna_motel
+
+#yuna_home
+@bg apartment_night
+@show yuna smile center
+유나: 문어 소시지는 여섯 개만 해요. 남은 공간에는 좋아하는 반찬 넣을 거라서.
+나: 좋아하는 거, 이제 말해주는 거예요?
+@show yuna shy center
+유나: 응. 생각보다 어려운 일 아니더라고요. 들어주는 사람이 있으면.
+저녁 뒤엔 영화를 골랐다. 크레딧이 올라가자 그녀가 먼저 화면을 멈췄다.
+@bg cg_yuna_date
+@hideall
+유나: 손, 잡아도 돼요?
+나는 손바닥을 내밀었다. 그녀는 손가락을 천천히 맞잡고 내 어깨에 기댔다.
+유나: 처음 만났을 때보다 지금이 더 좋아요. 그땐 좋은 사람일 것 같았고, 지금은 알아서.
+우리는 서로의 눈을 보고 잠깐 웃었다. 그녀가 고개를 끄덕인 뒤 조심스럽게 입을 맞췄다.
+@bg apartment_night
+@show yuna shy center
+유나: 오늘 더 같이 있어도 괜찮을까요? 힘들면 말해줘요.
+? 서로 괜찮은지 확인하고 함께 밤을 보낸다 -> yuna_home_stay
+? 오늘은 배웅하고 다음 약속을 잡는다 -> yuna_leave
+
+#yuna_home_stay
+나: 괜찮아요. 유나도 마음이 바뀌면 바로 말해줘요.
+유나: 그럴게요. 오늘은 안아주세요.
+그녀의 목소리는 작았지만 망설이지 않았다. 우리는 조용히 서로를 안았다.
+@fade out
+@hideall
+이후의 시간은 둘이 간직하기로 했다. 창밖의 불빛이 하나둘 꺼졌다.
+@bg home
+@day 다음 날 · 둘의 아침
+@fade in
+@show yuna smile center
+유나: 아침은 제가 만들었어요. 어제 같이 만든 반찬도 있고요.
+나: 도시락은요?
+유나: 오늘은 싸지 않을래요. 지금 여기 같이 앉아 있는 사람이 있으니까.
+@jump yuna_epilogue
+
+#yuna_motel
+@bg street_night
+@show yuna normal center
+몇 주 뒤, 우리는 근교 전시를 보러 갔다. 하루 더 쉬기로 한 건 둘이 함께 고른 계획이었다.
+@bg motel_night
+유나: 숙소가 조용해서 좋네요. 오늘은 알림도 꺼두려고요.
+그녀는 마케팅팀 단체방을 잠시 음소거하고 휴대폰을 내려놓았다.
+유나: 쉬는 게 미안했는데, 이제는 내일 잘하기 위해 쉬어도 된다고 생각해요.
+@show yuna shy center
+소파에 나란히 앉아 창밖을 보았다. 그녀는 내 손을 잡고 먼저 짧게 입을 맞췄다.
+유나: 오늘 같이 머물고 싶어요. 당신은 어때요?
+? 나도 원한다고 말하고 함께 머문다 -> yuna_motel_stay
+? 오늘은 돌아가고 다음 나들이를 약속한다 -> yuna_leave
+
+#yuna_motel_stay
+나: 나도 그래요. 어느 순간이든 편하지 않으면 말해줘요.
+유나: 응. 오늘은 말 안 하고 혼자 참지 않을게요.
+우리는 포옹한 채로 한참 말을 나누었다.
+@fade out
+@hideall
+그 뒤의 이야기는 둘이 아끼는 기억으로 남겼다.
+@bg motel_morning
+@day 다음 날 · 천천히 시작하는 하루
+@fade in
+@show yuna smile center
+유나: 아침 먹으러 가기보다 잠깐 더 여기 앉아 있고 싶어요.
+나: 그 부탁도 승인입니다.
+유나: 부탁하는 거, 꽤 좋아졌나 봐요. 나.
+@jump yuna_epilogue
+
+#yuna_leave
+@bg street_night
+@show yuna smile center
+유나: 솔직하게 말해줘서 고마워요. 아쉬운 거랑 서운한 건 다른 거니까요.
+다음 주에 같이 읽을 책을 고르고 집 앞에서 천천히 손을 놓았다.
+그날 밤 그녀에게서 짧은 메시지가 왔다. [오늘도 좋았어요. 다음에도요.]
+@jump yuna_epilogue
+
+#yuna_epilogue
+@hideall
+@bg rooftop_sunset
+@day 세 달 뒤 · 크레딧 다음 장면
+@show yuna smile center
+유나의 새 영상이 공개됐다. 이번 크레딧에는 처음부터 그녀의 이름이 있었다.
+유나: 다음 프로젝트에서는 작은 기획도 맡아보기로 했어요. 제가 먼저 얘기했어요.
+나: 축하해요. 같이 기념할까요?
+유나: 응. 오늘은 제 얘기만 하지 말고 당신 하루도 들려주세요.
+옥상 벤치에는 도시락 두 개와 다음 주말에 함께 읽을 책이 놓여 있었다.
+크레딧은 이야기의 끝이 아니었다. 그녀와 나의 일상은 화면 밖에서 계속되고 있었다.
+@end yuna 정유나 엔딩 「크레딧 뒤의 한 줄」
+
+#seoyun_after
+@hideall
+@bg cafe
+@day 연애 2주차 · 토요일
+@show seoyun normal center
+연애를 시작한 뒤 가장 먼저 정한 것은 회사에서의 규칙이었다.
+서윤: 업무 피드백은 그대로 할 거예요. 불편한 일은 나 말고도 팀장에게 얘기할 수 있어야 하고요.
+나: 밖에서는 빨간 펜 안 꺼내는 규칙도 넣죠.
+@show seoyun smile center
+서윤: 노력해볼게요. 당신 데이트 일정은 세 군데 고치고 싶지만.
+그녀는 업무 알림을 껐다. 오늘은 끝내지 못한 문서보다 함께 걷는 길이 먼저였다.
+? 자취방에서 유자차를 마시며 쉬자 -> seoyun_home
+? 주말 나들이 뒤 예약한 모텔에 머물자 -> seoyun_motel
+
+#seoyun_home
+@bg apartment_night
+@show seoyun normal center
+서윤은 내 책장 앞에서 게임 기획서 대신 낡은 만화책을 한 권 골랐다.
+서윤: 나도 쉬는 날에는 이런 거 읽어요. 매일 숫자만 보는 사람은 아니거든.
+나: 오늘은 일 얘기 안 하기 성공이네요.
+@show seoyun smile center
+서윤: 아직 유자차 두 모금밖에 안 마셨잖아요. 좀 더 지켜봐요.
+작은 농담이 오가고 그녀는 소파에 기대어 길게 숨을 내쉬었다.
+서윤: 당신 앞에서는 괜찮은 척을 좀 덜하게 돼요. 그게 생각보다 좋네요.
+@bg cg_seoyun_date
+@hideall
+나는 안아도 되냐고 물었다. 그녀는 눈을 마주친 뒤 내 쪽으로 몸을 기댔다.
+서윤: 응. 지금은 그냥 이렇게 있어요.
+포옹이 풀린 뒤에도 손은 놓지 않았다. 그녀가 먼저 다가와 짧게 입을 맞췄다.
+@bg apartment_night
+@show seoyun shy center
+서윤: 오늘은 더 같이 있고 싶어요. 업무 때문이 아니라 내가 원해서.
+? 나도 원한다고 말하고 함께 머문다 -> seoyun_home_stay
+? 오늘은 배웅하고 다음 데이트를 약속한다 -> seoyun_leave
+
+#seoyun_home_stay
+나: 나도 그래요. 어느 쪽이든 마음이 바뀌면 말하기로 해요.
+서윤: 약속할게요. 빨간 펜 없이도 말할 수 있어야 하니까.
+그녀는 내 손을 다시 잡았다. 우리가 가까워지는 속도는 우리가 정했다.
+@fade out
+@hideall
+긴 대화가 잦아들었다. 그 밤의 나머지는 둘만의 이야기로 남겼다.
+@bg home
+@day 다음 날 · 출근하지 않는 아침
+@fade in
+@show seoyun smile center
+서윤: 눈 뜨자마자 메일 안 본 건 정말 오랜만이네.
+나: 오늘은 어디 갈까요?
+서윤: 아무 데도 안 가도 좋겠어요. 커피부터 마셔요, 우리.
+@jump seoyun_epilogue
+
+#seoyun_motel
+@bg street_night
+@show seoyun normal center
+한 달 뒤의 짧은 주말 여행. 서윤은 숙소를 고르면서 처음으로 회사와의 거리를 기준에 넣지 않았다.
+@bg motel_night
+서윤: 예전에 휴가를 잡아놓고도 반나절 만에 돌아간 적 있어요. 일이 생겨서.
+나: 이번엔요?
+@show seoyun smile center
+서윤: 팀에 맡겼어요. 나 없어도 되는 일이 있다는 걸 믿어보려고.
+우리는 소파에서 내일 갈 산책길을 골랐다. 그녀의 손가락이 내 손등에 머물렀다.
+@show seoyun shy center
+서윤: 오늘 같이 머물러도 괜찮아요? 편한 대답 해요. 내가 사수라는 건 여기서 이유가 아니니까.
+? 내 마음도 같다고 말하고 함께 머문다 -> seoyun_motel_stay
+? 오늘은 돌아가고 다음 여행을 기약한다 -> seoyun_leave
+
+#seoyun_motel_stay
+나: 내 마음도 같아요. 우리 둘 다 원할 때만요.
+서윤: 응. 그럼 지금은 좀 더 가까이 와요.
+우리는 서로를 안고 짧게 입을 맞췄다.
+@fade out
+@hideall
+도시가 잦아들고 그 밤의 이야기는 둘에게만 남았다.
+@bg motel_morning
+@day 다음 날 · 알람 없는 아침
+@fade in
+@show seoyun smile center
+서윤: 처음으로 체크아웃 시간이 아쉽네요.
+나: 다음에 또 오면 되죠.
+서윤: 다음에는 하루 더 쉬어요. 캘린더에 먼저 넣어둘래요.
+@jump seoyun_epilogue
+
+#seoyun_leave
+@bg street_night
+@show seoyun smile center
+서윤: 좋아요. 그런 얘기를 편하게 하는 사이가 됐으면 했어요.
+우리는 다음 주 토요일을 약속하고 집 앞에서 짧게 입을 맞췄다.
+서윤: 잘 자요. 오늘 좋았어요. 내일은 일 얘기 말고 아침 인사부터 할게요.
+@jump seoyun_epilogue
+
+#seoyun_epilogue
+@hideall
+@bg office
+@day 세 달 뒤 · 빨간 펜 다음 줄
+@show seoyun normal center
+내 첫 단독 기획이 통과됐다. 문서 맨 아래에는 빨간 펜으로 '승인' 두 글자가 적혀 있었다.
+서윤: 이번 건 당신이 끝까지 책임지고 만든 거예요. 내가 대신한 거 아니고.
+@show seoyun smile center
+서윤: 오늘은 제시간에 퇴근해요. 나도 그럴 거니까.
+회사 밖에서 그녀가 내 손을 잡았다. 우리는 유자차와 다음 휴가 이야기를 했다.
+그녀의 캘린더에는 업무 일정 사이로 두 사람의 시간이 자리 잡고 있었다.
+빨간 펜으로 고칠 수 없는 날도 있을 것이다. 그런 날에도 같은 편에서 다음 줄을 쓰기로 했다.
 @end seoyun 한서윤 엔딩 「빨간 펜의 마지막 줄」
 `;
 
 // 캐릭터 정의 (모두 성인)
 window.CHARS = {
-  seoyun: { name: '서윤', full: '한서윤', age: 29, role: '라이브 기획 파트장', color: '#5b6b8c', hair: '#1f1a1a', hairStyle: 'bob_long' },
-  harin:  { name: '하린', full: '윤하린', age: 26, role: 'UI 디자이너 (경력 입사 동기)', color: '#e0795b', hair: '#5a3a28', hairStyle: 'short' },
-  yuna:   { name: '유나', full: '정유나', age: 27, role: '마케팅팀', color: '#7a9a7e', hair: '#2a211c', hairStyle: 'long' },
+  seoyun: { name: '서윤', full: '한서윤', age: 31, role: '라이브 기획 파트장', color: '#5b6b8c', hair: '#1f1a1a', hairStyle: 'bob_long' },
+  harin:  { name: '하린', full: '윤하린', age: 21, role: 'UI 디자이너 (경력 입사 동기)', color: '#e0795b', hair: '#5a3a28', hairStyle: 'short' },
+  yuna:   { name: '유나', full: '정유나', age: 25, role: '마케팅팀', color: '#7a9a7e', hair: '#2a211c', hairStyle: 'long' },
 };
 window.SPEAKERS = { '서윤': 'seoyun', '하린': 'harin', '유나': 'yuna' };
 window.ROUTE_THRESHOLD = 12;
 
 window.BGS = {
+  cg_harin_gym: ['#dae7ec', '#7e9ca7', '함께하는 헬스장 데이트'],
+  apartment_night: ['#332920', '#a07950', '자취방의 저녁'],
+  motel_night: ['#342620', '#a07950', '주말 여행의 숙소'],
+  motel_morning: ['#efe1cc', '#bca387', '숙소의 아침'],
+  cg_seoyun_date: ['#332920', '#a07950', '서윤과 함께 쉬는 저녁'],
+  cg_harin_date: ['#332920', '#a07950', '하린과 함께 쉬는 저녁'],
+  cg_yuna_date: ['#332920', '#a07950', '유나와 함께 쉬는 저녁'],
   lobby: ['#cfd8e3', '#8fa3b8', '로비'],
   office: ['#e8ecef', '#b9c4cc', '사무실'],
   office_night: ['#1e2738', '#3a4a66', '야근하는 사무실'],
