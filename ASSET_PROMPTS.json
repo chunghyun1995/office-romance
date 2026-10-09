@@ -1,254 +1,776 @@
 [
   {
-    "id": "seoyun_normal",
-    "type": "char",
-    "prompt": "Photorealistic character asset for a workplace story game. A fictional 29-year-old Korean woman, mature professional, long straight black hair, thin silver-rimmed glasses, charcoal business blazer over a fully buttoned ivory blouse and charcoal knee-length skirt. Calm neutral expression, looking at camera, relaxed hands at sides. Realistic skin texture, soft neutral studio lighting, natural makeup. Single person centered in vertical 2:3 composition, entire head through mid-thigh, arms and hands inside frame. Isolated on genuinely transparent background. No text, no watermark.",
-    "file": "images/char/seoyun_normal.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "harin_normal",
-    "type": "char",
-    "prompt": "Photorealistic transparent character sprite for a workplace story visual novel. A fictional 26-year-old adult Korean woman, chin-length chestnut brown bob haircut, small hoop earrings, cream knit cardigan over a fitted striped crew-neck shirt, high-waisted navy skirt, office ID lanyard without readable text, friendly calm expression. Natural skin texture, soft neutral studio light, natural makeup, looking at camera, relaxed hands at sides. Single person centered in a vertical 2:3 frame, entire head through mid-thigh, arms and hands fully inside frame. GENUINELY TRANSPARENT ALPHA BACKGROUND: only the person is visible, no scenery, no studio backdrop, no gradient, no floor, no ambient halo. No text, no watermark.",
-    "file": "images/char/harin_normal.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "yuna_normal",
-    "type": "char",
-    "prompt": "Photorealistic transparent character sprite for a workplace story visual novel. A fictional 27-year-old adult Korean woman, very long dark hair in a low ponytail, sage green long-sleeve blouse with a modest V collar and beige midi skirt, reserved calm expression. Natural skin texture, soft neutral studio light, natural makeup, looking at camera, relaxed hands at sides. Single person centered in a vertical 2:3 frame, entire head through mid-thigh, arms and hands fully inside frame. GENUINELY TRANSPARENT ALPHA BACKGROUND: only the person is visible, no scenery, no studio backdrop, no gradient, no floor, no ambient halo. No text, no watermark.",
-    "file": "images/char/yuna_normal.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "seoyun_smile",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to warm gentle smile. Preserve exact identity, age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text. This is seoyun, an adult office worker.",
-    "file": "images/char/seoyun_smile.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "harin_smile",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to warm gentle smile. Preserve exact identity, age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text. This is harin, an adult office worker.",
-    "file": "images/char/harin_smile.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "yuna_smile",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to warm gentle smile. Preserve exact identity, age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text. This is yuna, an adult office worker.",
-    "file": "images/char/yuna_smile.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "seoyun_shy",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to shy small smile, faint natural blush, eyes looking slightly aside. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/seoyun_shy.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "harin_shy",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to shy small smile, faint natural blush, eyes looking slightly aside. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/harin_shy.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "yuna_shy",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to shy small smile, faint natural blush, eyes looking slightly aside. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/yuna_shy.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "seoyun_sad",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to sad tired expression, lowered gaze. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/seoyun_sad.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "harin_sad",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to sad tired expression, lowered gaze. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/harin_sad.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "yuna_sad",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to sad tired expression, lowered gaze. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/yuna_sad.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "seoyun_surprise",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to surprised expression, widened eyes, slightly parted lips. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/seoyun_surprise.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "harin_surprise",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to surprised expression, widened eyes, slightly parted lips. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/harin_surprise.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "yuna_surprise",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to surprised expression, widened eyes, slightly parted lips. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/yuna_surprise.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "seoyun_angry",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to serious stern expression, subtle frown. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/seoyun_angry.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "harin_angry",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to serious stern expression, subtle frown. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/harin_angry.webp",
-    "tool": "built-in image_gen"
-  },
-  {
-    "id": "yuna_angry",
-    "type": "char",
-    "prompt": "Edit the provided fictional adult character sprite. Change ONLY facial expression to serious stern expression, subtle frown. Preserve exact identity, adult age, facial proportions, hair, outfit, pose, hands, camera framing, pixel dimensions, and lighting. Retain genuine transparent alpha background, no backdrop, no text.",
-    "file": "images/char/yuna_angry.webp",
-    "tool": "built-in image_gen"
-  },
-  {
     "id": "lobby",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: modern glass office building lobby in Pangyo Korea, tall windows, polished stone floor, reception desk, soft morning sunlight. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/lobby.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "office",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: open-plan Korean game development company office, rows of dual monitors, ergonomic chairs, plants, bright soft daylight, glass partitions. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/office.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "office_night",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: open-plan Korean game development office at night, most ceiling lights off, rows of dual monitors, intimate warm desk lamp and cool monitor glow, distant city lights. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/office_night.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "meeting",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: small glass meeting room in a Korean technology company, long wooden table, office chairs, whiteboard without writing, afternoon daylight. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/meeting.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "cafeteria",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: bright modern Korean company cafeteria, neat food counters, wooden lunch tables, lunchtime sunlight. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/cafeteria.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "rooftop",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: office rooftop garden in Pangyo Korea at night, wood benches, planters, warm small garden lights, deep blue sky, sparkling city skyline, quiet romantic ambience. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/rooftop.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        940
+      ],
+      "outputPixels": [
+        2560,
+        1439
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "rooftop_sunset",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: office rooftop garden in Pangyo Korea at sunset, wood benches, planters, orange and purple sky, soft warm evening light, romantic tranquil mood. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/rooftop_sunset.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "cafe",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: cozy ground-floor Korean coffee shop, window seats, wooden tables, plants, amber afternoon sunlight, inviting intimate setting. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/cafe.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "cafe_night",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: quiet elegant dim wine bar in Korea, warm table lamps, deep burgundy upholstery, wine glasses on tables, evening, intimate romantic cinematic lighting. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/cafe_night.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "pantry",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: modern Korean office pantry at night, coffee machine, tea shelf, small counter, warm under-cabinet light, tranquil. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/pantry.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "street_night",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: Korean business district street at night, crosswalk, illuminated office buildings, slightly reflective pavement, blue hour and warm street lamps. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/street_night.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "street_day",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: Korean business district street by offices in Pangyo during daytime, clean sidewalk, small Korean lunch restaurant storefronts with unobtrusive signage, soft daylight. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/street_day.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "izakaya",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: Japanese izakaya restaurant interior in Korea, large group table, wooden stools, warm paper lanterns, evening atmosphere. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/izakaya.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "home",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: small tidy Korean one-room apartment, bed and small desk, books, cozy textiles, warm morning sunlight through curtains. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/home.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "gallery",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: white-walled art gallery in Seongsu Seoul, tastefully framed original abstract illustrations, polished floor, diffused daylight. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/gallery.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "karaoke",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: Korean private karaoke room, violet and pink neon light, karaoke screen without text, comfortable leather sofa, table, moody evening lighting. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/karaoke.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "bookcafe",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: small quiet book cafe in a Korean alley, tall wooden bookshelves, wooden tables, warm lamps, cozy afternoon atmosphere. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/bookcafe.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   },
   {
     "id": "hangang",
     "type": "bg",
     "prompt": "Use case: photorealistic-natural. Asset: landscape background for Korean office romance visual novel. Scene: Han River park in Seoul at sunset, grassy lawn with a few unoccupied picnic mats, riverside pathway, broad river and bridge, golden pink sky, peaceful romantic evening. Natural cinematic architectural photography, realistic materials, 35mm lens, eye-level wide composition, horizontal 16:9 aspect ratio. Leave central foreground unobstructed for character sprites; coherent perspective. No people, no characters, no text overlays, no watermarks, no logos. Beautiful restrained cinematic color grading.",
     "file": "images/bg/hangang.webp",
-    "tool": "built-in image_gen"
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "seoyun_normal",
+    "type": "char",
+    "prompt": "Edit the provided fictional adult woman (31 years old). Change ONLY her outfit to a neat opaque ivory long-sleeved blouse with a closed modest collar, tucked into tailored high-waisted charcoal full-length slacks. No shorts. Preserve exact distinctive face and identity, hair, glasses where present, natural adult body proportions, expression, pose, hands, framing and lighting. Fully clothed. Preserve genuine transparent alpha background, no scenery, no text.",
+    "file": "images/char/seoyun_normal.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly mature 31-year-old Korean woman with an angular tapered face, defined high cheekbones, narrow almond eyes with subtly lifted outer corners, arched brows, a straight refined nose, slim lips and a knowing composed expression. Human facial features suggest a sharp fox-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "seoyun_smile",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to warm gentle smile. Preserve exact distinctive identity and age (31), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/seoyun_smile.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly mature 31-year-old Korean woman with an angular tapered face, defined high cheekbones, narrow almond eyes with subtly lifted outer corners, arched brows, a straight refined nose, slim lips and a knowing composed expression. Human facial features suggest a sharp fox-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "seoyun_shy",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to shy small smile, faint natural blush, eyes looking slightly aside. Preserve exact distinctive identity and age (31), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/seoyun_shy.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly mature 31-year-old Korean woman with an angular tapered face, defined high cheekbones, narrow almond eyes with subtly lifted outer corners, arched brows, a straight refined nose, slim lips and a knowing composed expression. Human facial features suggest a sharp fox-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "seoyun_sad",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to sad tired expression, lowered gaze. Preserve exact distinctive identity and age (31), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/seoyun_sad.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly mature 31-year-old Korean woman with an angular tapered face, defined high cheekbones, narrow almond eyes with subtly lifted outer corners, arched brows, a straight refined nose, slim lips and a knowing composed expression. Human facial features suggest a sharp fox-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "seoyun_surprise",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to surprised expression, widened eyes, slightly parted lips. Preserve exact distinctive identity and age (31), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/seoyun_surprise.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly mature 31-year-old Korean woman with an angular tapered face, defined high cheekbones, narrow almond eyes with subtly lifted outer corners, arched brows, a straight refined nose, slim lips and a knowing composed expression. Human facial features suggest a sharp fox-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "seoyun_angry",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to serious stern expression, subtle frown. Preserve exact distinctive identity and age (31), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/seoyun_angry.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly mature 31-year-old Korean woman with an angular tapered face, defined high cheekbones, narrow almond eyes with subtly lifted outer corners, arched brows, a straight refined nose, slim lips and a knowing composed expression. Human facial features suggest a sharp fox-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "harin_normal",
+    "type": "char",
+    "prompt": "Create a revised fictional character identity using the provided image as an OUTFIT, HAIRSTYLE, POSE AND LIGHTING REFERENCE. Replace the facial identity with a clearly adult 21-year-old Korean woman with a round oval face, soft full cheeks, wide-set round dark eyes with gently downward outer corners, straight soft brows, a short softly rounded nose, a naturally friendly innocent adult expression. Human facial features give a warm puppy-like impression; no animal features. Preserve her slender adult frame and small bust. The three game heroines need clearly different faces. Preserve the reference's hair style and color, silver glasses where present, opaque casual T-shirt, denim shorts, body shape, relaxed hands, standing pose, head-to-mid-thigh framing, vertical 2:3 dimensions and soft neutral photographic light. Natural skin texture and realistic adult facial anatomy. Calm neutral expression. Genuinely transparent alpha background, no scenery, no text, no watermark.",
+    "file": "images/char/harin_normal.webp",
+    "tool": "built-in image_gen",
+    "identity": "a clearly adult 21-year-old Korean woman with a round oval face, soft full cheeks, wide-set round dark eyes with gently downward outer corners, straight soft brows, a short softly rounded nose, a naturally friendly innocent adult expression. Human facial features give a warm puppy-like impression; no animal features. Preserve her slender adult frame and small bust",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "harin_smile",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to warm gentle smile. Preserve exact distinctive identity and age (21), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/harin_smile.webp",
+    "tool": "built-in image_gen",
+    "identity": "a clearly adult 21-year-old Korean woman with a round oval face, soft full cheeks, wide-set round dark eyes with gently downward outer corners, straight soft brows, a short softly rounded nose, a naturally friendly innocent adult expression. Human facial features give a warm puppy-like impression; no animal features. Preserve her slender adult frame and small bust",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "harin_shy",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to shy small smile, faint natural blush, eyes looking slightly aside. Preserve exact distinctive identity and age (21), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/harin_shy.webp",
+    "tool": "built-in image_gen",
+    "identity": "a clearly adult 21-year-old Korean woman with a round oval face, soft full cheeks, wide-set round dark eyes with gently downward outer corners, straight soft brows, a short softly rounded nose, a naturally friendly innocent adult expression. Human facial features give a warm puppy-like impression; no animal features. Preserve her slender adult frame and small bust",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "harin_sad",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to sad tired expression, lowered gaze. Preserve exact distinctive identity and age (21), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/harin_sad.webp",
+    "tool": "built-in image_gen",
+    "identity": "a clearly adult 21-year-old Korean woman with a round oval face, soft full cheeks, wide-set round dark eyes with gently downward outer corners, straight soft brows, a short softly rounded nose, a naturally friendly innocent adult expression. Human facial features give a warm puppy-like impression; no animal features. Preserve her slender adult frame and small bust",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "harin_surprise",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to surprised expression, widened eyes, slightly parted lips. Preserve exact distinctive identity and age (21), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/harin_surprise.webp",
+    "tool": "built-in image_gen",
+    "identity": "a clearly adult 21-year-old Korean woman with a round oval face, soft full cheeks, wide-set round dark eyes with gently downward outer corners, straight soft brows, a short softly rounded nose, a naturally friendly innocent adult expression. Human facial features give a warm puppy-like impression; no animal features. Preserve her slender adult frame and small bust",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "harin_angry",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to serious stern expression, subtle frown. Preserve exact distinctive identity and age (21), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/harin_angry.webp",
+    "tool": "built-in image_gen",
+    "identity": "a clearly adult 21-year-old Korean woman with a round oval face, soft full cheeks, wide-set round dark eyes with gently downward outer corners, straight soft brows, a short softly rounded nose, a naturally friendly innocent adult expression. Human facial features give a warm puppy-like impression; no animal features. Preserve her slender adult frame and small bust",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "yuna_normal",
+    "type": "char",
+    "prompt": "Edit the provided fictional adult woman (25 years old). Change ONLY her outfit to an opaque sage-green off-shoulder ribbed knit top with a tasteful wide neckline exposing only the shoulders, paired with opaque white high-waisted denim shorts. Normal casual summer fashion. Preserve exact distinctive face and identity, hair, glasses where present, natural adult body proportions, expression, pose, hands, framing and lighting. Fully clothed. Preserve genuine transparent alpha background, no scenery, no text.",
+    "file": "images/char/yuna_normal.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly adult 25-year-old Korean woman with a slim diamond-oval face, a defined softly pointed chin, long upward almond eyes, crisp straight brows, a delicate straight nose, fuller well-defined lips, poised cool confident gaze. Human features suggest an aloof elegant cat-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "yuna_smile",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to warm gentle smile. Preserve exact distinctive identity and age (25), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/yuna_smile.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly adult 25-year-old Korean woman with a slim diamond-oval face, a defined softly pointed chin, long upward almond eyes, crisp straight brows, a delicate straight nose, fuller well-defined lips, poised cool confident gaze. Human features suggest an aloof elegant cat-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "yuna_shy",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to shy small smile, faint natural blush, eyes looking slightly aside. Preserve exact distinctive identity and age (25), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/yuna_shy.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly adult 25-year-old Korean woman with a slim diamond-oval face, a defined softly pointed chin, long upward almond eyes, crisp straight brows, a delicate straight nose, fuller well-defined lips, poised cool confident gaze. Human features suggest an aloof elegant cat-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "yuna_sad",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to sad tired expression, lowered gaze. Preserve exact distinctive identity and age (25), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/yuna_sad.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly adult 25-year-old Korean woman with a slim diamond-oval face, a defined softly pointed chin, long upward almond eyes, crisp straight brows, a delicate straight nose, fuller well-defined lips, poised cool confident gaze. Human features suggest an aloof elegant cat-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "yuna_surprise",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to surprised expression, widened eyes, slightly parted lips. Preserve exact distinctive identity and age (25), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/yuna_surprise.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly adult 25-year-old Korean woman with a slim diamond-oval face, a defined softly pointed chin, long upward almond eyes, crisp straight brows, a delicate straight nose, fuller well-defined lips, poised cool confident gaze. Human features suggest an aloof elegant cat-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "yuna_angry",
+    "type": "char",
+    "prompt": "Edit this fictional adult character photograph. Change ONLY facial expression to serious stern expression, subtle frown. Preserve exact distinctive identity and age (25), facial proportions, hairstyle, outfit, body shape, pose, hands, framing, lighting and dimensions. Keep genuine transparent alpha background. No text or scenery.",
+    "file": "images/char/yuna_angry.webp",
+    "tool": "built-in image_gen",
+    "identity": "a distinctly adult 25-year-old Korean woman with a slim diamond-oval face, a defined softly pointed chin, long upward almond eyes, crisp straight brows, a delicate straight nose, fuller well-defined lips, poised cool confident gaze. Human features suggest an aloof elegant cat-like impression; no animal features",
+    "resolution": {
+      "sourcePixels": [
+        1024,
+        1536
+      ],
+      "outputPixels": [
+        2048,
+        3072
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "apartment_night",
+    "type": "bg",
+    "prompt": "Photorealistic landscape background for a Korean contemporary romance story game. a cozy tidy small Korean studio apartment living area at night, compact fabric sofa, low wooden table with two tea mugs and a board game, warm table lamp, city lights behind sheer window curtains, comfortable intimate everyday home atmosphere. Eye-level 35mm interior architectural photography, realistic textures, horizontal 16:9. Central foreground space for standing character sprites. No people, no text, no logos, no watermark.",
+    "file": "images/bg/apartment_night.webp",
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "motel_night",
+    "type": "bg",
+    "prompt": "Photorealistic landscape background for a Korean contemporary romance story game. a tasteful modest Korean boutique motel guest room at night, neatly made double bed, small sofa by a low table, two mugs, warm bedside lamps, calm amber light, clean simple furnishing, no mirrors above the bed. Eye-level 35mm interior architectural photography, realistic textures, horizontal 16:9. Central foreground space for standing character sprites. No people, no text, no logos, no watermark.",
+    "file": "images/bg/motel_night.webp",
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "motel_morning",
+    "type": "bg",
+    "prompt": "Photorealistic landscape background for a Korean contemporary romance story game. a tasteful modest Korean boutique motel guest room in the morning, neatly made double bed, small sofa and low table with two breakfast coffee cups, sunlit window curtains, gentle warm morning daylight, clean simple furnishing. Eye-level 35mm interior architectural photography, realistic textures, horizontal 16:9. Central foreground space for standing character sprites. No people, no text, no logos, no watermark.",
+    "file": "images/bg/motel_morning.webp",
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "cg_seoyun_date",
+    "type": "bg",
+    "prompt": "Use case: photorealistic-natural. Create a horizontal 16:9 cinematic romantic story still. The reference image is the fictional adult female character identity and exact outfit reference, 31 years old. Preserve her recognizable face, hairstyle, glasses if present, and exact opaque clothes from the reference. She sits beside her adult Korean boyfriend, age 28, short black hair, simple navy crew-neck T-shirt and casual trousers, his face seen only in slight side profile. They are on a compact sofa in a cozy Korean studio apartment at night, gently holding hands, she rests her head on his shoulder, natural affectionate smiles. Fully clothed everyday couple spending quiet time together, relaxed non-suggestive posture, warm table lamp, tea mugs and a board game on the low table, subtle city bokeh through the window. Medium-wide composition with both faces visible in the upper two-thirds and clear lower quarter for dialogue box. Natural realistic skin texture, coherent anatomy, no text, no watermark.",
+    "file": "images/bg/cg_seoyun_date.webp",
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "cg_harin_date",
+    "type": "bg",
+    "prompt": "Use case: photorealistic-natural. Create a horizontal 16:9 cinematic romantic story still. The reference image is the fictional adult female character identity and exact outfit reference, 21 years old. Preserve her recognizable face, hairstyle, glasses if present, and exact opaque clothes from the reference. She sits beside her adult Korean boyfriend, age 28, short black hair, simple navy crew-neck T-shirt and casual trousers, his face seen only in slight side profile. They are on a compact sofa in a cozy Korean studio apartment at night, gently holding hands, she rests her head on his shoulder, natural affectionate smiles. Fully clothed everyday couple spending quiet time together, relaxed non-suggestive posture, warm table lamp, tea mugs and a board game on the low table, subtle city bokeh through the window. Medium-wide composition with both faces visible in the upper two-thirds and clear lower quarter for dialogue box. Natural realistic skin texture, coherent anatomy, no text, no watermark.",
+    "file": "images/bg/cg_harin_date.webp",
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
+  },
+  {
+    "id": "cg_yuna_date",
+    "type": "bg",
+    "prompt": "Use case: photorealistic-natural. Create a horizontal 16:9 cinematic romantic story still. The reference image is the fictional adult female character identity and exact outfit reference, 25 years old. Preserve her recognizable face, hairstyle, glasses if present, and exact opaque clothes from the reference. She sits beside her adult Korean boyfriend, age 28, short black hair, simple navy crew-neck T-shirt and casual trousers, his face seen only in slight side profile. They are on a compact sofa in a cozy Korean studio apartment at night, gently holding hands, she rests her head on his shoulder, natural affectionate smiles. Fully clothed everyday couple spending quiet time together, relaxed non-suggestive posture, warm table lamp, tea mugs and a board game on the low table, subtle city bokeh through the window. Medium-wide composition with both faces visible in the upper two-thirds and clear lower quarter for dialogue box. Natural realistic skin texture, coherent anatomy, no text, no watermark.",
+    "file": "images/bg/cg_yuna_date.webp",
+    "tool": "built-in image_gen",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   }
 ]

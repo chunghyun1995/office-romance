@@ -120,7 +120,7 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
   const fresh = () => ({
     name: '이도현', label: 'start', idx: 0,
     aff: { seoyun: 0, harin: 0, yuna: 0 },
-    bg: null, chars: { left: null, center: null, right: null }, log: [],
+    bg: null, fade: false, chars: { left: null, center: null, right: null }, log: [],
   });
   let S = fresh();
   let meta = store.get(META_KEY, { endings: [], read: {} });
@@ -158,6 +158,7 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
     });
   }
   const fill = (t) => t.replaceAll('{name}', S.name);
+  const renderFade = () => $('#scene-fade').classList.toggle('on', !!S.fade);
 
   // ---------- 실행 루프 ----------
   function step() {
@@ -170,6 +171,7 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
       S.idx++;
       switch (c.type) {
         case 'bg': S.bg = c.args[0]; renderBg(); break;
+        case 'fade': S.fade = c.args[0] === 'out'; renderFade(); break;
         case 'show': {
           const [id, expr = 'normal', pos] = c.args;
           let p = pos || Object.keys(S.chars).find((k) => S.chars[k] && S.chars[k][0] === id) || 'center';
@@ -283,7 +285,7 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
     S = { ...fresh(), ...JSON.parse(JSON.stringify(state)) };
     hideScreens();
     $('#hud').hidden = false; $('#choices').hidden = true;
-    renderBg(); renderChars();
+    renderBg(); renderChars(); renderFade();
     waiting = null; step();
   }
   function saveSlot(n) {
@@ -351,7 +353,7 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
       case 'cancel': $('#namebox').hidden = true; return;
       case 'start': {
         const nm = $('#name-input').value.trim() || '이도현';
-        S = fresh(); S.name = nm;
+        S = fresh(); S.name = nm; renderFade();
         hideScreens(); $('#hud').hidden = false; step(); return;
       }
       case 'continue': modal('불러오기', slotsHtml('load')); return;
