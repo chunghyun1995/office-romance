@@ -772,5 +772,23 @@
       ],
       "method": "Lanczos upscale; not native 2K generation"
     }
+  },
+  {
+    "id": "cg_harin_gym",
+    "type": "bg",
+    "file": "images/bg/cg_harin_gym.webp",
+    "tool": "built-in image_gen",
+    "prompt": "Photorealistic natural lifestyle photograph for a visual novel gym date. Landscape 16:9. Use reference only to preserve the fictional adult woman's face and hair identity. She is a 21-year-old adult Korean woman with short light brown bob, gentle rounded face, slender adult physique, wearing an opaque coral athletic sports bra top and ordinary black dolphin running shorts with white piping. She is standing beside an exercise mat holding a rolled towel, smiling naturally toward her off-camera exercise partner. Bright modern gym, daylight, equipment visible, eye-level medium-wide candid composition, realistic natural skin texture, face in upper central area, room for dialogue at bottom. Ordinary recreational fitness activity, relaxed upright posture. No text or watermark.",
+    "resolution": {
+      "sourcePixels": [
+        1672,
+        941
+      ],
+      "outputPixels": [
+        2560,
+        1441
+      ],
+      "method": "Lanczos upscale; not native 2K generation"
+    }
   }
 ]

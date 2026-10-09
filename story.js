@@ -787,6 +787,7 @@ window.STORY = String.raw`
 하린: 연애하면 매일 엄청 특별할 줄 알았어요. 근데 같이 장 보는 게 제일 좋더라.
 ? 우리 집에서 같이 저녁을 만들자 -> harin_home
 ? 주말 여행을 가서 예약한 모텔에 묵자 -> harin_motel
+? 주말에 함께 헬스장에서 운동한다 -> harin_gym
 
 #harin_home
 @bg apartment_night
@@ -863,6 +864,37 @@ window.STORY = String.raw`
 나: 대신 내일 점심에 만나기.
 하린: 그건 회장 권한으로 승인합니다.
 집 앞에서 짧게 입을 맞추고 각자의 집에서 같은 사진을 배경화면으로 골랐다.
+@jump harin_epilogue
+
+#harin_gym
+@hideall
+@bg cg_harin_gym
+@day 연애 한 달 · 함께 움직이는 주말
+하린: 오늘은 운동 앱 출석 도장, 혼자 말고 둘이 찍는 날이에요.
+산호색 스포츠 브라탑과 돌핀 팬츠를 입은 하린이 매트 옆에서 수건을 흔들었다.
+나: 도장 다 모으면 보상도 있어요?
+하린: 끝나고 맛있는 점심! 무리해서 추가 점수 받기는 없어요.
+? 매트에서 가볍게 몸을 풀며 이야기한다 -> harin_gym_walk
+? 각자 좋아하는 운동을 하고 다시 만난다 -> harin_gym_rest
+
+#harin_gym_walk
+둘이 어설프게 동작을 따라 하다가 동시에 웃음이 터졌다.
+하린: 잘하는 모습만 보여주려면 데이트가 너무 피곤하겠죠? 오늘은 이 정도면 합격.
+@jump harin_gym_finish
+
+#harin_gym_rest
+하린은 자기 속도로 운동하고 돌아와 휴대폰에 출석 표시를 남겼다.
+하린: 기록보다 계속 오는 게 목표예요. 다음 주에도 같이 와줄래요?
+@jump harin_gym_finish
+
+#harin_gym_finish
+운동을 마치고 서로의 물병을 챙겼다. 다음 약속은 거창한 여행 대신 다음 주말의 같은 시간이었다.
+@hideall
+@bg street_day
+@show harin smile center
+샤워하고 평소 옷으로 갈아입은 뒤 헬스장 앞에서 다시 만났다.
+나: 이제 점심 먹으러 갈까요?
+우리는 손을 잡고 걸었다. 특별한 날 사이에 이런 평범한 시간이 하나씩 늘어갔다.
 @jump harin_epilogue
 
 #harin_epilogue
@@ -1093,6 +1125,7 @@ window.SPEAKERS = { '서윤': 'seoyun', '하린': 'harin', '유나': 'yuna' };
 window.ROUTE_THRESHOLD = 12;
 
 window.BGS = {
+  cg_harin_gym: ['#dae7ec', '#7e9ca7', '함께하는 헬스장 데이트'],
   apartment_night: ['#332920', '#a07950', '자취방의 저녁'],
   motel_night: ['#342620', '#a07950', '주말 여행의 숙소'],
   motel_morning: ['#efe1cc', '#bca387', '숙소의 아침'],
