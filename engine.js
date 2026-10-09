@@ -91,14 +91,18 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
     return 'url("data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg) + '")';
   }
 
-  // 실제 이미지 파일이 있으면 그것을, 없으면 플레이스홀더를 쓴다.
+  // 로딩 중에는 이전 이미지를 유지하고, 모든 후보가 실패할 때만 대체 이미지를 쓴다.
   const resolved = new Map();
+  const pending = new Map();
   function probe(paths) {
     return new Promise((res) => {
       const tryAt = (i) => {
         if (i >= paths.length) return res(null);
         const im = new Image();
-        im.onload = () => res(paths[i]);
+        im.onload = async () => {
+          try { await im.decode(); res(paths[i]); }
+          catch { tryAt(i + 1); }
+        };
         im.onerror = () => tryAt(i + 1);
         im.src = paths[i];
       };
@@ -107,12 +111,15 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
   }
   function resolveImage(key, paths, fallback, apply) {
     if (resolved.has(key)) { apply(resolved.get(key)); return; }
-    apply(fallback);
-    probe(paths).then((p) => {
-      const val = p ? `url("${p}")` : fallback;
-      resolved.set(key, val);
-      apply(val);
-    });
+    if (!pending.has(key)) {
+      pending.set(key, probe(paths).then((p) => {
+        const val = p ? `url("${p}")` : fallback;
+        resolved.set(key, val);
+        pending.delete(key);
+        return val;
+      }));
+    }
+    pending.get(key).then(apply);
   }
   const variants = (dir, base) => IMG_EXT.map((e) => `images/${dir}/${base}.${e}`);
 
@@ -135,9 +142,11 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
     const el = $('#bg');
     if (!b) { el.style.background = '#111'; $('#bg-label').textContent = ''; return; }
     const grad = `linear-gradient(160deg, ${b[0]}, ${b[1]})`;
+    const bg = S.bg;
     $('#bg-label').textContent = b[2];
+    $('#bg-label').style.display = 'none';
     resolveImage('bg:' + S.bg, variants('bg', S.bg), grad, (v) => {
-      if (window.BGS[S.bg] !== b) return;
+      if (S.bg !== bg) return;
       el.style.background = v + ' center / cover no-repeat';
       $('#bg-label').style.display = v === grad ? '' : 'none';
     });
@@ -147,6 +156,7 @@ ${f.blush ? '<ellipse cx="-30" cy="44" rx="11" ry="5" fill="#e8907e" opacity=".5
       const slot = S.chars[el.dataset.pos];
       if (!slot) { el.classList.remove('on'); el.dataset.id = ''; return; }
       const [id, expr] = slot;
+      if (el.dataset.id !== id) el.style.backgroundImage = 'none';
       el.classList.add('on');
       el.classList.toggle('dim', !!activeId && activeId !== id);
       el.dataset.id = id;
