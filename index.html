@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>오피스 로맨스: 첫 일주일</title>
+<meta name="description" content="판교 게임 회사에서 보내는 첫 일주일. 세 명의 동료와 함께하는 오피스 연애 시뮬레이션.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="bg"><div id="bg-label"></div></div>
+  <div id="chars">
+    <div class="char" data-pos="left"></div>
+    <div class="char" data-pos="center"></div>
+    <div class="char" data-pos="right"></div>
+  </div>
+
+  <div id="daycard"><span></span></div>
+
+  <div id="textbox" hidden>
+    <div id="speaker"></div>
+    <div id="text"></div>
+    <div id="next-ind">▼</div>
+  </div>
+
+  <div id="choices" hidden></div>
+
+  <nav id="hud" hidden>
+    <button data-act="auto">자동</button>
+    <button data-act="skip">스킵</button>
+    <button data-act="log">로그</button>
+    <button data-act="save">저장</button>
+    <button data-act="load">불러오기</button>
+    <button data-act="status">호감도</button>
+    <button data-act="title">타이틀</button>
+  </nav>
+
+  <!-- 타이틀 -->
+  <section id="title" class="screen">
+    <div class="title-inner">
+      <p class="eyebrow">OFFICE ROMANCE SIMULATION</p>
+      <h1>오피스 로맨스<span>첫 일주일</span></h1>
+      <p class="tagline">판교의 한 게임 회사. 입사 첫 주, 세 사람과의 7일.</p>
+      <div class="menu">
+        <button data-act="new">새로 시작</button>
+        <button data-act="continue">이어하기</button>
+        <button data-act="endings">엔딩 목록</button>
+        <button data-act="about">등장인물</button>
+      </div>
+      <p class="note">모든 등장인물은 성인이며, 이야기는 픽션입니다.</p>
+    </div>
+  </section>
+
+  <!-- 이름 입력 -->
+  <section id="namebox" class="screen" hidden>
+    <div class="panel">
+      <h2>주인공 이름</h2>
+      <p>넥스트웨이브 기획팀 신입사원. 당신의 이름은?</p>
+      <input id="name-input" maxlength="8" value="이도현" autocomplete="off">
+      <div class="row"><button data-act="cancel">취소</button><button data-act="start" class="primary">입사하기</button></div>
+    </div>
+  </section>
+
+  <!-- 공용 모달 -->
+  <section id="modal" class="screen" hidden>
+    <div class="panel wide">
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+      <div class="row"><button data-act="close">닫기</button></div>
+    </div>
+  </section>
+
+  <!-- 엔딩 -->
+  <section id="ending" class="screen" hidden>
+    <div class="ending-inner">
+      <p class="eyebrow">ENDING</p>
+      <h2 id="ending-title"></h2>
+      <p id="ending-count"></p>
+      <button data-act="totitle">타이틀로</button>
+    </div>
+  </section>
+</div>
+<script src="story.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>
